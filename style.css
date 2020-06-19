@@ -1,0 +1,180 @@
+.h3-menu{
+text-decoration:underline;
+color:red;}
+.navbar-text{
+	text-align:right;
+}
+.h3m{
+	text-align:left;
+	text-decoration-color:#A9A9A9;
+	color:black;
+	margin-top:25;
+
+}
+ul{
+	padding-left:3;
+}
+.h4cl{
+	margin-top:5;
+}
+.h4m{
+	background-color:#F5DEB3;
+	text-decoration:underline;
+	text-decoration-color:#DEB887;
+	
+	
+	
+}
+#pagination li.active{
+	cursor:pointer;
+	color:red;
+	border:20px solid red;
+	
+}
+.spane{
+	margin-right:0;
+	color:red;
+}
+
+.licl{
+	color:black;
+}
+.h6ul{
+	color:#FF4500;
+	margin-left: 5;
+	
+}
+.img1{
+	  transform: rotate(50deg);
+	  float:right;
+}
+.btntb {
+	height:40;
+	width:50;
+	
+}
+.imgmen{
+	width: 200;
+    height: 200;
+    margin-bottom: 20;
+    text-align: center;
+	margin-left:50;
+}
+.card{
+	width:300;
+}
+.cardmen{
+	background-color:#DEB887;
+	
+}
+{
+	background-color:#F5DEB3;
+	text-decoration:underline;
+	text-decoration-color:#DEB887;
+	color:#696969;
+	
+}
+.butmen{
+    height: 30;
+    width: 30;
+	border-radius:10%;
+	text-align:center;
+	margin-left:30;
+}
+.inpmen{
+   width: 50;
+   height: 30;
+   text-align:center;
+   
+}
+.btn btn-light {
+	margin-left:10;
+}
+.next {
+  color:#E9967A;
+}
+.form-check-label{
+	font-size: 22;
+    margin-bottom: 2;
+  
+	text-decoration-color:#DEB887;
+	color:black;
+	font-family:inherit;
+}
+.lic{
+	font-size: 19;
+    font-family: inherit;
+}
+.footernum{
+	text-align:left;
+	margin-left:20;
+}
+.inputdop{
+	height: 35;
+    width: 150;
+    color: #800000;
+}
+.center{
+	text-align:center;
+	border-radius:10%;
+}
+.h3men{
+	margin-left:120;
+}
+.form-check-input {
+    height: 30;
+    width: 20;
+	margin-right:20;
+}
+
+body{
+	overflow-x:hiden;
+}
+.h2cel{
+    margin: 20;
+    margin-top: -5;
+}
+}
+.hr1{
+	border-radius:5px;
+	background-color:#696969;
+	height:6px;
+	border-bottom-style:groove;
+}
+.h3dop{
+	text-align:left;
+	
+}
+.hrvib{
+	border-radius:3px;
+	background-color:#696969;
+	height:2px;
+	border-bottom-style:groove;
+	
+}
+.modal-header{
+	background: rgb(34,195,172);
+background: linear-gradient(0deg, rgba(34,195,172,1) 22%, rgba(19,198,28,1) 89%);
+}
+.modal-body{
+background: rgb(217,161,76);
+background: linear-gradient(0deg, rgba(217,161,76,0.16010154061624648) 0%, rgba(200,168,79,0.9500175070028011) 100%);
+}
+.modal-footer{
+	background: rgb(34,195,172);
+background: linear-gradient(0deg, rgba(34,195,172,1) 22%, rgba(19,198,28,1) 89%);
+}
+    
+ {
+    color: #007bff;
+    background-color: transparent;
+    background-image: none;
+    border-color: #007bff;
+    height: 45;
+    width: 200;
+    margin-top: 22;
+    margin-left: 70;
+}
+
+
+    
