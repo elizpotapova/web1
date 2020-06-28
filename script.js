@@ -5,7 +5,7 @@ let sel3= document.getElementById('sel3');
 let sel4= document.getElementById('sel4');
 let card1= document.getElementById('card1');
 let items=document.querySelector('#pagination');
-
+let butN=document.getElementById('butN')
 function getMessage(){
 let obXhr = new XMLHttpRequest();
 table.innerHTML = '';
@@ -41,7 +41,7 @@ return b.rate-a.rate
 });
 for(let key in result){
 console.log(result[key].rate)
-if (result[key].rate>80){
+if (result[key].rate>70){
 if(i==20){break;}
 else{i++;}
 }
@@ -86,6 +86,7 @@ let button_choose=document.getElementsByClassName('buttab');//вот тут на
 for (let element of button_choose){
 element.onclick = () => {
 
+card1.innerHTML='';
 let obXhr = new XMLHttpRequest();
 obXhr.open('GET', `fail.json`);
 
@@ -99,24 +100,35 @@ return;
 }
 
 if(obXhr.response){
+	
 let card1= document.getElementById('card1');
 let result1 = JSON.parse(obXhr.response);
 let ca1;
+document.addEventListener('click', function (e) {
+  if (e.target.classList.contains("increase")) {
+	   if(e.target.parentElement.querySelector('input').value<=9)
+    ++e.target.parentElement.querySelector('input').value;
+  } else if (e.target.classList.contains("decrease")) {
+	  if(e.target.parentElement.querySelector('input').value>0){
+    --e.target.parentElement.querySelector('input').value;
+	  }
+  }
+ })
 for (let i=0;i<result1.length;i++){
 console.log(result1[i])
 ca1= document.createElement('div');
 
 ca1.innerHTML =`
 
-<div class="card" style="background-color:#DEB887;" >
+<div class="card card1" style="background-color:#DEB887;" >
 <div class="card-body">
 <div class="container">
 <img src="${result1[i].image}" class="imgmen">
-<div>${result1[i].name}</div>
-<div>${result1[i].description}</div>
-<button type="button" class="btn btn-light"><span class="minus">-</span></button>
+<div><h5>${result1[i].name}</h5></div>
+<div><h6 style="color:#696969">${result1[i].description}</h6></div>
+<button type="button" class="decrease"><span class="minus">-</span></button>
 <input type="text" value="0" size="20" class="inpmen"/>
-<button type="button" class="btn btn-light"><span class="plus">+</span></button>
+<button type="button" class="increase"><span class="plus">+</span></button>
 </div>
 </div>
 </div>
@@ -127,7 +139,6 @@ ca1.innerHTML =`
 card1.append(ca1);
 
 }
-
 }
 }
 }
@@ -143,7 +154,8 @@ card1.append(ca1);
 
 
 
-}//конец функции показа страниц
+}
+//конец функции показа страниц
 /*tab = document.createElement('tr');
 
 tab.innerHTML =`
@@ -263,7 +275,7 @@ select3.innerHTML =`
 sel3.append(select3);
 }
 let select4;
-let soc = result.map(Soc =>{return Soc.socialPrivileges;});
+let soc = result.map(Soc =>{return Soc.socialDiscount;});
 var uniqueArray3 =[];
 var count=0;
 var found=false;
@@ -283,6 +295,7 @@ found=false;
 console.log(uniqueArray3);
 for(let key in uniqueArray3){
 console.log(uniqueArray3[key]);
+ 
 
 select4= document.createElement('option');
 
@@ -295,13 +308,162 @@ select4.innerHTML =`
 `
 sel4.append(select4);
 }
+let result1 = JSON.parse(obXhr.response);
+let ca1;
+butN.addEventListener('click', function (k) {
+
+
+ table.innerHTML='';
+
+	let arr_print = result1.filter((element) => {
+		if( element.admArea == okrug )
+			{
+         if(element.district  ==  dist)
+{
+	       if( element.typeObject  == type )
+{ console.log(arr_print);
+            if(soc == "Есть")
+{
+              if(element.socialDiscount > 0)
+{
+              k++;
+               return element;
+}
+             }
+                if(soc == "Нет")
+               {
+                 if(element.socialDiscount = 0)
+               {
+                 k++;
+                   return element;
+                }
+               }
+                 if(soc.length == 0)
+                {
+                  k++;
+                  return element;
+                }
+                }
+               if( typeOb.length == 0)
+{
+               if(soc == "Есть")
+                {
+               if(element.socialDiscount > 0)
+                {
+                k++;
+                return element;
+                }
+                }
+               if(soc == "Нет")
+                {
+               if(element.socialDiscount = 0)
+                {
+                k++;
+                return element;
+                }
+                }
+               if(soc.length == 0)
+                {
+                k++;
+                return element;
+                }
+
+                }
+                }
+			   if( Distr.length == 0)
+                {
+               if( element.typeObject== type )
+                {
+               if(soc == "Есть")
+                {
+               if(element.socialDiscount > 0)
+                {
+                k++;
+                return element;
+                }
+                }
+               if(soc== "Нет")
+                {
+               if(element.socialDiscount = 0)
+                {
+                k++;
+                return element;
+                }
+                }
+               if(soc.length == 0)
+                {
+                k++;
+               return element;
+                }
+                }
+
+
+               if( type.length == 0)
+                {
+               if(soc == "Есть")
+                {
+               if(element.socialDiscount > 0)
+                {
+                k++;
+                return element;
+                }
+                }
+               if(soc == "Нет")
+                {
+               if(element.socialDiscount = 0)
+                {
+                k++;
+                return element;
+                }
+                }
+               if(socialDisc.length == 0)
+                {
+                k++;
+                return element;
+                }
+                }
+                }
+                }
+                }).sort((a, b) => a.rate < b.rate ? 1 : -1);//конец фильтрации массива по нашим параметрам + отсортировано по убыванию рейтинга
+				console.log(arr_print);
+				
+let tabl;
+for (let note in arr_print){
+tabl = document.createElement('tr');
+
+tabl.innerHTML =`
+
+<tr>
+<td>${arr_print[note].name}</td>
+<td>${arr_print[note].typeObject}</td>
+<td>${arr_print[note].address}</td>
+<td>☆${arr_print[note].rate}</td>
+<button class="buttab">выбрать</button>
+</tr>
+
+`
+table.append(tab);
+}
+})
+                }
+				
+				
+}
+
+
 
 }
 
-}
 
-}
+
+
+
+
+
+
+
 
 document.addEventListener('DOMContentLoaded',getMessage());
+
  
 

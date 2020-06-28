@@ -1,0 +1,127 @@
+<html>
+	<head>
+	<link href="style1.css" rel="stylesheet">
+	  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    </head>
+	<body>
+	<br>
+	<div class="container col-md-11 col-xs-11" style="background-color:#DEB887;">
+	<br>
+	<h3>Административная панель </h3>
+	<hr>
+	</div>
+	<div class="container col-md-12 col-xs-12">
+	<div class="alert alert-secondary" role="alert">
+  <strong>Уведомление!</strong>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+    </div>
+	</div>
+	
+	<div class="container col-md-11 col-xs-11"> 
+	<h4>Предприятия общественного питания </h4>
+	<h4 style="color:#696969;">города Москвы</h4>
+	</div>
+	<hr class="hr1">
+  <div class="container col-md-11 col-xs-11" style="background-color:#E9967A;">
+  <form class="needs-validation nep" novalidate>
+  <div class="form-row" >
+    <div class="col-md-6 ">
+	<h5  style="color:#696969">Наименование </h5>
+	<div >
+	<input  type="text" class="form-control">
+  
+</input>
+</div>
+</div>
+<div class="container col-md-6 ">
+<h5  style="color:#696969">Административный округ </h5>
+<select class="custom-select " id="admin">
+</select>
+</div>
+</div>
+ <div class="form-row" style="background-color:#E9967A;">
+  <div class="container col-md-2">
+<h5  style="color:#696969">Количество посадочных мест </h5>
+</div>
+<div class="container col-md-4">
+<span  >от<input type="number" class="form-control"  placeholder="100"></input></span>
+<span  >до<input type="number" class="form-control"  placeholder="500"></input></span>
+
+</div>
+<div class="container col-md-2">
+<h5  style="color:#696969">Является сетевым </h5>
+<select class="custom-select ">
+</select>
+</div>
+<div class="container col-md-4">
+<h5  style="color:#696969">Район</h5>
+<select class="custom-select ">
+</select>
+</div>
+</div>
+ <div class="form-row" style="background-color:#E9967A;">
+  <div class="container col-md-2 ">
+<h5  style="color:#696969">Дата создания </h5>
+</div>
+<div class="container col-md-4">
+<span  >с</span>
+<input type="date" class="form-control"  placeholder="01.05.2020">
+<span  >по</span>
+<input type="date" class="form-control"  placeholder="31.05.2020">
+</div>
+<div class="container col-md-2">
+<h5 style="color:#696969">Льготы </h5>
+<select class="custom-select ">
+</select>
+</div>
+<div class="container col-md-4">
+<h5 style="color:#696969">Вид объекта</h5>
+<select class="custom-select ">
+</select>
+</div>
+</div>
+<div class="container col-md-4 col-xs-4">
+<button class="btn btn-outline-primary " type="submit" >Найти</button>
+</div>
+</div>
+<table class="table table-striped" >
+   <thead>
+   <div class="container col-md-11 col-xs-11" >
+      <th scope="col">Наименование</th>
+      <th scope="col">Вид объекта</th>
+	  <th scope="col">Адрес</th>
+      <th scope="col">Действия</th>
+	  </div>
+  </thead>
+  <tbody id="tb2">
+  <div class="container-fluid col-md-12 col-xs-12">
+  </div>
+  </tbody>
+  </div>
+</table>
+
+<button type="button" class="btn btn-light"><a href="#" class="next">&laquo; Previous</a></button>
+<button type="button" class="btn btn-light"><a href="#" class="next">Next &raquo;</a></button>
+<button type="button" class="btn btn-warning" >Добавить предприятие</button>
+<hr class="hrvib">
+<footer class="page-footer font-small blue" >
+  <div class="footer-copyright text-center py-3">© 2020 Copyright:
+    <a href="#"> eat.com</a>
+	<div class="container col-md-6 col-xs-6" >
+   <div class="container col-md-6 col-xs-6" >
+	<span class="footernum">&#9742; 89603233119 </span>
+	</div>
+	<div class="container col-md-6 col-xs-6" >
+	<span class="footernum">&#9993; elizavetapotapova24@gmail.com </span>
+	</div>
+    </div>
+</footer>	
+	<script src="script1.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	</body>
+</html>	
