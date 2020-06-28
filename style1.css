@@ -21,7 +21,7 @@
 }
 .btn-outline-primary {
     margin-top: 15;
-    width: 400;
+    width: 200;
 }
 .butdob{
 	margin-left:50;
@@ -31,4 +31,9 @@
 	background-color:#696969;
 	height:2px;
 	border-bottom-style:groove;
+}
+
+.cont {
+	width:500;
+	overflow:scroll;
 }

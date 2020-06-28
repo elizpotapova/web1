@@ -25,6 +25,10 @@ ul{
 	
 	
 }
+.cont {
+	width:500;
+	overflow:scroll;
+}
 #pagination li.active{
 	cursor:pointer;
 	color:red;
@@ -60,8 +64,9 @@ ul{
     text-align: center;
 	margin-left:50;
 }
-.card{
+.card1{
 	width:300;
+	height:500;
 }
 .cardmen{
 	background-color:#DEB887;

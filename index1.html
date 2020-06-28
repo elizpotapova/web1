@@ -8,7 +8,8 @@
 	<br>
 	<div class="container col-md-11 col-xs-11" style="background-color:#DEB887;">
 	<br>
-	<h3>Административная панель </h3>
+	<h3>Административная панель </h3> <a class="btn btn btn-outline-danger my-2 my-sm-0" style="margin:30px;" href="index.html" role="button">Back
+       </a>
 	<hr>
 	</div>
 	<div class="container col-md-12 col-xs-12">
@@ -39,6 +40,7 @@
 <div class="container col-md-6 ">
 <h5  style="color:#696969">Административный округ </h5>
 <select class="custom-select " id="admin">
+<option value="не выбрано">не выбрано</option>
 </select>
 </div>
 </div>
@@ -54,11 +56,15 @@
 <div class="container col-md-2">
 <h5  style="color:#696969">Является сетевым </h5>
 <select class="custom-select ">
+<option value="не выбрано">не выбрано</option>
+<option value="да">да</option>
+<option value="нет">нет</option>
 </select>
 </div>
 <div class="container col-md-4">
 <h5  style="color:#696969">Район</h5>
-<select class="custom-select ">
+<select class="custom-select " id="sel2">
+<option value="не выбрано">не выбрано</option>
 </select>
 </div>
 </div>
@@ -74,12 +80,14 @@
 </div>
 <div class="container col-md-2">
 <h5 style="color:#696969">Льготы </h5>
-<select class="custom-select ">
+<select class="custom-select " id="sel4">
+<option value="не выбрано">не выбрано</option>
 </select>
 </div>
 <div class="container col-md-4">
 <h5 style="color:#696969">Вид объекта</h5>
-<select class="custom-select ">
+<select class="custom-select " id="type">
+<option value="не выбрано">не выбрано</option>
 </select>
 </div>
 </div>
@@ -87,6 +95,7 @@
 <button class="btn btn-outline-primary " type="submit" >Найти</button>
 </div>
 </div>
+<div class="container-fluid col-md-12 col-xs-12 cont">
 <table class="table table-striped" >
    <thead>
    <div class="container col-md-11 col-xs-11" >
@@ -96,15 +105,16 @@
       <th scope="col">Действия</th>
 	  </div>
   </thead>
-  <tbody id="tb2">
   <div class="container-fluid col-md-12 col-xs-12">
+  <tbody id="tb2">
   </div>
   </tbody>
-  </div>
 </table>
+</div>
+<ul id="pagination">
+</ul>
 
-<button type="button" class="btn btn-light"><a href="#" class="next">&laquo; Previous</a></button>
-<button type="button" class="btn btn-light"><a href="#" class="next">Next &raquo;</a></button>
+
 <button type="button" class="btn btn-warning" >Добавить предприятие</button>
 <hr class="hrvib">
 <footer class="page-footer font-small blue" >

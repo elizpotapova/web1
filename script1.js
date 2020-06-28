@@ -1,9 +1,8 @@
 let table= document.getElementById('tb2');
-let sel1= document.getElementById('sel1');
+let sel1= document.getElementById('admin');
 let sel2= document.getElementById('sel2');
-let sel3= document.getElementById('sel3');
+let sel3= document.getElementById('type');
 let sel4= document.getElementById('sel4');
-let card1= document.getElementById('card1');
 let items=document.querySelector('#pagination');
 let butN=document.getElementById('butN')
 function getMessage(){
@@ -76,6 +75,8 @@ tab.innerHTML =`
 <td>${notes[note].address}</td>
 <td>☆${notes[note].rate}</td>
 <button class="buttab">выбрать</button>
+<button class="buttab">изменить</button>
+<button class="buttab">удалить</button>
 </tr>
 
 `
@@ -83,96 +84,11 @@ table.append(tab);
 }
 
 let button_choose=document.getElementsByClassName('buttab');//вот тут начинается функция по клику на кнопку выбрать
-for (let element of button_choose){
-element.onclick = () => {
 
-card1.innerHTML='';
-let obXhr = new XMLHttpRequest();
-obXhr.open('GET', `fail.json`);
-
-obXhr.send();
-
-obXhr.onreadystatechange = function(){
-if(obXhr.readyState != 4) return;
-if(obXhr.status != 200){
-alert('Сервер недоступен ' + obXhr.status + ' ' + obXhr.statusText);
-return;
-}
-
-if(obXhr.response){
-	
-let card1= document.getElementById('card1');
-let result1 = JSON.parse(obXhr.response);
-let ca1;
-document.addEventListener('click', function (e) {
-  if (e.target.classList.contains("increase")) {
-	   if(e.target.parentElement.querySelector('input').value<=9)
-    ++e.target.parentElement.querySelector('input').value;
-  } else if (e.target.classList.contains("decrease")) {
-	  if(e.target.parentElement.querySelector('input').value>0){
-    --e.target.parentElement.querySelector('input').value;
-	  }
-  }
- })
-for (let i=0;i<result1.length;i++){
-console.log(result1[i])
-ca1= document.createElement('div');
-
-ca1.innerHTML =`
-
-<div class="card card1" style="background-color:#DEB887;" >
-<div class="card-body">
-<div class="container">
-<img src="${result1[i].image}" class="imgmen">
-<div><h5>${result1[i].name}</h5></div>
-<div><h6 style="color:#696969">${result1[i].description}</h6></div>
-<button type="button" class="decrease"><span class="minus">-</span></button>
-<input type="text" value="0" size="20" class="inpmen"/>
-<button type="button" class="increase"><span class="plus">+</span></button>
-</div>
-</div>
-</div>
-</div>
-
-
-`
-card1.append(ca1);
-
-}
-}
-}
-}
 }//тут заканчивается цикл перебора всех кнопок выбрать
 
 
 
-
-
-
-
-
-
-
-
-}
-//конец функции показа страниц
-/*tab = document.createElement('tr');
-
-tab.innerHTML =`
-
-<tr>
-<td>${result[key].name}</td>
-<td>${result[key].typeObject}</td>
-<td>${result[key].address}</td>
-<td>☆${result[key].rate}</td>
-<button class="buttab">выбрать</button>
-</tr>
-
-`
-table.append(tab);
-}
-}
-*/
 let select1;
 let okrug = result.map(Area =>{return Area.admArea;});
 var uniqueArray =[];
@@ -308,151 +224,12 @@ select4.innerHTML =`
 `
 sel4.append(select4);
 }
-let result1 = JSON.parse(obXhr.response);
-let ca1;
-butN.addEventListener('click', function (k) {
 
+   }
+  }
+  }
+ 
 
- table.innerHTML='';
-
-	let arr_print = result1.filter((element) => {
-		if( element.admArea == okrug )
-			{
-         if(element.district  ==  dist)
-{
-	       if( element.typeObject  == type )
-{ console.log(arr_print);
-            if(soc == "Есть")
-{
-              if(element.socialDiscount > 0)
-{
-              k++;
-               return element;
-}
-             }
-                if(soc == "Нет")
-               {
-                 if(element.socialDiscount = 0)
-               {
-                 k++;
-                   return element;
-                }
-               }
-                 if(soc.length == 0)
-                {
-                  k++;
-                  return element;
-                }
-                }
-               if( typeOb.length == 0)
-{
-               if(soc == "Есть")
-                {
-               if(element.socialDiscount > 0)
-                {
-                k++;
-                return element;
-                }
-                }
-               if(soc == "Нет")
-                {
-               if(element.socialDiscount = 0)
-                {
-                k++;
-                return element;
-                }
-                }
-               if(soc.length == 0)
-                {
-                k++;
-                return element;
-                }
-
-                }
-                }
-			   if( Distr.length == 0)
-                {
-               if( element.typeObject== type )
-                {
-               if(soc == "Есть")
-                {
-               if(element.socialDiscount > 0)
-                {
-                k++;
-                return element;
-                }
-                }
-               if(soc== "Нет")
-                {
-               if(element.socialDiscount = 0)
-                {
-                k++;
-                return element;
-                }
-                }
-               if(soc.length == 0)
-                {
-                k++;
-               return element;
-                }
-                }
-
-
-               if( type.length == 0)
-                {
-               if(soc == "Есть")
-                {
-               if(element.socialDiscount > 0)
-                {
-                k++;
-                return element;
-                }
-                }
-               if(soc == "Нет")
-                {
-               if(element.socialDiscount = 0)
-                {
-                k++;
-                return element;
-                }
-                }
-               if(socialDisc.length == 0)
-                {
-                k++;
-                return element;
-                }
-                }
-                }
-                }
-                }).sort((a, b) => a.rate < b.rate ? 1 : -1);//конец фильтрации массива по нашим параметрам + отсортировано по убыванию рейтинга
-				console.log(arr_print);
-				
-let tabl;
-for (let note in arr_print){
-tabl = document.createElement('tr');
-
-tabl.innerHTML =`
-
-<tr>
-<td>${arr_print[note].name}</td>
-<td>${arr_print[note].typeObject}</td>
-<td>${arr_print[note].address}</td>
-<td>☆${arr_print[note].rate}</td>
-<button class="buttab">выбрать</button>
-</tr>
-
-`
-table.append(tab);
-}
-})
-                }
-				
-				
-}
-
-
-
-}
 
 
 
