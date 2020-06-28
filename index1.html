@@ -6,117 +6,193 @@
     </head>
 	<body>
 	<br>
-	<div class="container col-md-11 col-xs-11" style="background-color:#DEB887;">
+   <div class="container col-md-11 col-xs-11" style="background-color:#DEB887;">
 	<br>
-	<h3>Административная панель </h3> <a class="btn btn btn-outline-danger my-2 my-sm-0" style="margin:30px;" href="index.html" role="button">Back
+	<h3>Административная панель </h3> 
+	   <a class="btn btn btn-outline-danger my-2 my-sm-0" style="margin:30px;" href="index.html" role="button">Back
        </a>
-	<hr>
-	</div>
+	   <hr>
+   </div>
 	<div class="container col-md-12 col-xs-12">
 	<div class="alert alert-secondary" role="alert">
-  <strong>Уведомление!</strong>
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-    <span aria-hidden="true">&times;</span>
-  </button>
+       <strong>Уведомление!</strong>
+       <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+       <span aria-hidden="true">&times;</span>
+       </button>
     </div>
 	</div>
 	
-	<div class="container col-md-11 col-xs-11"> 
-	<h4>Предприятия общественного питания </h4>
-	<h4 style="color:#696969;">города Москвы</h4>
-	</div>
-	<hr class="hr1">
+    <div class="container col-md-11 col-xs-11"> 
+	 <h4>Предприятия общественного питания </h4>
+	 <h4 style="color:#696969;">города Москвы</h4>
+    </div>
+	  <hr class="hr1">
   <div class="container col-md-11 col-xs-11" style="background-color:#E9967A;">
-  <form class="needs-validation nep" novalidate>
-  <div class="form-row" >
-    <div class="col-md-6 ">
-	<h5  style="color:#696969">Наименование </h5>
-	<div >
-	<input  type="text" class="form-control">
+     <form class="needs-validation nep" novalidate>
+    <div class="form-row" >
+      <div class="col-md-6 ">
+	    <h5  style="color:#696969">Наименование </h5>
+	   <div >
+	     <input  type="text" class="form-control">
   
-</input>
+         </input>
+       </div>
 </div>
-</div>
-<div class="container col-md-6 ">
-<h5  style="color:#696969">Административный округ </h5>
-<select class="custom-select " id="admin">
-<option value="не выбрано">не выбрано</option>
-</select>
-</div>
-</div>
+  <div class="container col-md-6 ">
+   <h5  style="color:#696969">Административный округ </h5>
+   <select class="custom-select " id="admin">
+     <option value="не выбрано">не выбрано</option>
+   </select>
+ </div>
+  </div>
  <div class="form-row" style="background-color:#E9967A;">
   <div class="container col-md-2">
-<h5  style="color:#696969">Количество посадочных мест </h5>
-</div>
-<div class="container col-md-4">
-<span  >от<input type="number" class="form-control"  placeholder="100"></input></span>
-<span  >до<input type="number" class="form-control"  placeholder="500"></input></span>
-
-</div>
-<div class="container col-md-2">
-<h5  style="color:#696969">Является сетевым </h5>
-<select class="custom-select ">
-<option value="не выбрано">не выбрано</option>
-<option value="да">да</option>
-<option value="нет">нет</option>
-</select>
-</div>
-<div class="container col-md-4">
-<h5  style="color:#696969">Район</h5>
-<select class="custom-select " id="sel2">
-<option value="не выбрано">не выбрано</option>
-</select>
-</div>
-</div>
- <div class="form-row" style="background-color:#E9967A;">
-  <div class="container col-md-2 ">
-<h5  style="color:#696969">Дата создания </h5>
-</div>
-<div class="container col-md-4">
-<span  >с</span>
-<input type="date" class="form-control"  placeholder="01.05.2020">
-<span  >по</span>
-<input type="date" class="form-control"  placeholder="31.05.2020">
-</div>
-<div class="container col-md-2">
-<h5 style="color:#696969">Льготы </h5>
-<select class="custom-select " id="sel4">
-<option value="не выбрано">не выбрано</option>
-</select>
-</div>
-<div class="container col-md-4">
-<h5 style="color:#696969">Вид объекта</h5>
-<select class="custom-select " id="type">
-<option value="не выбрано">не выбрано</option>
-</select>
-</div>
-</div>
-<div class="container col-md-4 col-xs-4">
-<button class="btn btn-outline-primary " type="submit" >Найти</button>
-</div>
-</div>
-<div class="container-fluid col-md-12 col-xs-12 cont">
-<table class="table table-striped" >
-   <thead>
-   <div class="container col-md-11 col-xs-11" >
-      <th scope="col">Наименование</th>
-      <th scope="col">Вид объекта</th>
-	  <th scope="col">Адрес</th>
-      <th scope="col">Действия</th>
-	  </div>
-  </thead>
-  <div class="container-fluid col-md-12 col-xs-12">
-  <tbody id="tb2">
+     <h5  style="color:#696969">Количество посадочных мест </h5>
   </div>
-  </tbody>
-</table>
-</div>
-<ul id="pagination">
-</ul>
+  <div class="container col-md-4">
+     <span  >от<input type="number" class="form-control"  placeholder="100"></input></span>
+     <span  >до<input type="number" class="form-control"  placeholder="500"></input></span>
+
+  </div>
+  <div class="container col-md-2">
+     <h5  style="color:#696969">Является сетевым </h5>
+     <select class="custom-select ">
+       <option value="не выбрано">не выбрано</option>
+       <option value="да">да</option>
+       <option value="нет">нет</option>
+     </select>
+  </div>
+  <div class="container col-md-4">
+     <h5  style="color:#696969">Район</h5>
+      <select class="custom-select " id="sel2">
+       <option value="не выбрано">не выбрано</option>
+      </select>
+  </div>
+   </div>
+  <div class="form-row" style="background-color:#E9967A;">
+    <div class="container col-md-2 ">
+      <h5  style="color:#696969">Дата создания </h5>
+    </div>
+    <div class="container col-md-4">
+       <span  >с</span>
+       <input type="date" class="form-control"  placeholder="01.05.2020">
+       <span  >по</span>
+       <input type="date" class="form-control"  placeholder="31.05.2020">
+    </div>
+    <div class="container col-md-2">
+      <h5 style="color:#696969">Льготы </h5>
+      <select class="custom-select " id="sel4">
+        <option value="не выбрано">не выбрано</option>
+      </select>
+    </div>
+    <div class="container col-md-4">
+       <h5 style="color:#696969">Вид объекта</h5>
+       <select class="custom-select " id="type">
+         <option value="не выбрано">не выбрано</option>
+       </select>
+    </div>
+  </div>
+    <div class="container col-md-4 col-xs-4">
+      <button class="btn btn-outline-primary " type="submit" >Найти</button>
+    </div>
+   </div>
+    <div class="container-fluid col-md-12 col-xs-12 cont">
+       <table class="table table-striped" >
+         <thead>
+          <div class="container col-md-11 col-xs-11" >
+            <th scope="col">Наименование</th>
+            <th scope="col">Вид объекта</th>
+	        <th scope="col">Адрес</th>
+            <th scope="col">Действия</th>
+	      </div>
+         </thead>
+    <div class="container-fluid col-md-12 col-xs-12">
+         <tbody id="tb2">
+    </div>
+        </tbody>
+        </table>
+    </div>
+       <ul id="pagination">
+       </ul>
 
 
-<button type="button" class="btn btn-warning" >Добавить предприятие</button>
-<hr class="hrvib">
+<button type="button" class="btn btn-warning" data-toggle="modal" data-target="#exampleModal">Добавить предприятие</button>
+<hr class="hrv">
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header" >
+        <h5 class="modal-title" id="exampleModalLabel">Создание записи</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+	    <br>Наименование:<input VALUE="" class="inputdop"></input> </br>
+	    <div class="form-check">
+         <h6 class="modal-title" id="exampleModalLabel">Является сетевым:</h6>
+		
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+             <label class="form-check-label" for="exampleRadios1">
+               Да
+             </label>
+           </div>
+           <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                Нет
+              </label>
+           </div>
+        </div>
+	      <br>Название управляющей компании:<input VALUE="" class="inputdop"></input> </br>
+           
+             <br>Вид объекта</br>
+              <select class="custom-select " id="sel5">
+               <option value="не выбрано">не выбрано</option>
+              </select>
+           
+		   
+             <br >Административный округ</br>
+              <select class="custom-select " id="sel6">
+               <option value="не выбрано">не выбрано</option>
+              </select>
+          
+		   
+             <br >Район<br>
+              <select class="custom-select " id="sel7">
+               <option value="не выбрано">не выбрано</option>
+              </select>
+            <br>
+	        <br>Адрес:<input VALUE="" class="inputdop"></input> </br>
+			<br>Число посадочных мест:<input VALUE="" class="inputdop"></input> </br>
+			<div class="form-check">
+         <h6 class="modal-title">Показатель социальных льгот</h6>
+		
+           <div class="form-check">
+             <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option1" checked>
+             <label class="form-check-label" for="exampleRadios1">
+               Есть
+             </label>
+           </div>
+           <div class="form-check">
+              <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios4" value="option2">
+              <label class="form-check-label" for="exampleRadios2">
+                Нет
+              </label>
+           </div>
+        </div>
+			<br>Телефон:<input VALUE="" class="inputdop"></input> </br>
+            
+	     <hr>
+      </div>
+	  
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary">Ок</button>
+      </div>
+    </div>
+  </div>
+  </div>
 <footer class="page-footer font-small blue" >
   <div class="footer-copyright text-center py-3">© 2020 Copyright:
     <a href="#"> eat.com</a>

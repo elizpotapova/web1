@@ -37,3 +37,15 @@
 	width:500;
 	overflow:scroll;
 }
+.modal-header{
+	background: rgb(34,195,172);
+background: linear-gradient(0deg, rgba(34,195,172,1) 22%, rgba(19,198,28,1) 89%);
+}
+.modal-body{
+background: rgb(217,161,76);
+background: linear-gradient(0deg, rgba(217,161,76,0.16010154061624648) 0%, rgba(200,168,79,0.9500175070028011) 100%);
+}
+.modal-footer{
+	background: rgb(34,195,172);
+background: linear-gradient(0deg, rgba(34,195,172,1) 22%, rgba(19,198,28,1) 89%);
+}
