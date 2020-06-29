@@ -79,7 +79,7 @@ function getMessage() {
 					<td>${notes[note].typeObject}</td>
 					<td>${notes[note].address}</td>
 					<td>☆${notes[note].rate}</td>
-					<button class="buttab">выбрать</button>
+					<button class=" buttab">выбрать</button>
 					</tr>
 					
 					`
@@ -140,7 +140,7 @@ function getMessage() {
                                         need_obj = element;
                                     }
                                 })
-
+                                updateRest(need_obj);
                                 arr_price = Object.values(need_obj).slice(15);
 
                                 console.log(need_obj)
@@ -522,7 +522,7 @@ function getMessage() {
                                             need_obj = element;
                                         }
                                     })
-
+                                    updateRest(need_obj);
                                     arr_price = Object.values(need_obj).slice(15);
 
                                     console.log(need_obj)
@@ -624,15 +624,19 @@ function updateCheck() {
         }
 
     });
-    tableCheck.innerHTML = tabletemp;
+
 
     let listDopOptions = document.getElementById('dopOptions');
 
     let strOptions = '';
 
+    let isDiscount = false;
+    let fPrice = price;
 
     if (document.getElementById('defaultCheck1').checked) {
+        fPrice = price;
         price *= 0.8;
+        isDiscount = true;
         strOptions += `<li>Соц. скидка</li>`
     }
     if (document.getElementById('defaultCheck2').checked) {
@@ -643,11 +647,30 @@ function updateCheck() {
         strOptions += `<li>Бесконтактная доставка</li>`
     }
     if (tolpa.checked) {
+        fPrice = fPrice*2;
         strOptions += `<li>На компанию</li>`
     }
-    listDopOptions.innerHTML = strOptions;
 
+    if (isDiscount) {
+        tabletemp += `<tr>
+                        <th>ИТОГО:</th>
+                        <th></th>
+                        <th><del>${fPrice}</del>  ${price}</th>
+                    </tr>`
+    } else {
+        tabletemp += `<tr>
+                        <th>ИТОГО:</th>
+                        <th></th>
+                        <th>${price}</th>
+                    </tr>`
+    }
+
+    tableCheck.innerHTML = tabletemp;
+    listDopOptions.innerHTML = strOptions;
+    price += 230;
     document.getElementById('itogo').value = price;
+
+    document.getElementById('fullPrice').innerText = `Итого: ${price} Руб.`;
 }
 
 
@@ -664,4 +687,13 @@ function minus(input) {
     if (number > 0)
         element.value = number - 1;
     updateCheck()
+}
+
+function updateRest(rest) {
+    let restInfo = document.getElementById('restInfo');
+    restInfo.innerHTML = `<br>Название: ${rest.name}</br>
+                    <br>Административный округ: ${rest.admArea}</br>
+                    <br>Район: ${rest.district}</br>
+                    <br>Адрес: ${rest.address}</br>
+                    <br>Рейтинг: ${rest.rate}</br>`
 }

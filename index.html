@@ -245,7 +245,8 @@
         </div>
         <h3>Итог:
             <input value="0" class="inputdop" id="itogo">
-            <button onclick="updateCheck()" type="button" class="btn btn-success" data-toggle="modal" data-target="#exampleModal">Оформить
+            <button onclick="updateCheck()" type="button" class="btn btn-success" data-toggle="modal"
+                    data-target="#exampleModal">Оформить
                 заказ
             </button>
             </input> </h3>
@@ -278,23 +279,24 @@
                     </tbody>
                 </table>
                 <hr>
-                <h6 class="modal-title" >Дополнительные опции:</h6>
+                <h6 class="modal-title">Дополнительные опции:</h6>
                 <ul class="w-100" id="dopOptions">
                 </ul>
                 <hr>
-                <h6 class="modal-title" id="exampleModalLabel">Информация о предприятии</h6>
-                <br>Название </br>
-                <br>Административный округ </br>
-                <br>Район </br>
-                <br>Адрес </br>
-                <br>Рейтинг </br>
+                <h6 class="modal-title">Информация о предприятии</h6>
+                <div class="row" id="restInfo">
+                    <br>Название </br>
+                    <br>Административный округ </br>
+                    <br>Район </br>
+                    <br>Адрес </br>
+                    <br>Рейтинг </br>
+                </div>
                 <hr>
-                <h6 class="modal-title" id="exampleModalLabel">Доставка</h6>
+                <h6 class="modal-title">Доставка: 230 Руб.</h6>
                 <br>Зона доставки: </br>
-                <br>Адрес доставки:<input class="inputdop"></input> </br>
-                <br>Стоимость доставки: </br>
-                <br>ФИО получателя:<input VALUE="Ваше ФИО" class="inputdop"></input> </br>
-                <h5>Итого:</h5>
+                <br>Адрес доставки:<input class="inputdop"/> </br>
+                <br>ФИО получателя:<input VALUE="Ваше ФИО" class="inputdop"/> </br>
+                <h5 id="fullPrice">Итого:</h5>
             </div>
 
             <div class="modal-footer">
